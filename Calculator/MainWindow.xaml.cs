@@ -64,7 +64,7 @@ namespace Calculator
                     txbResult.Text = "";
                     isResult = false;
                 }
-                else if (txbResult.Text == "0" || txbResult.Text == "Cannot divide by zero")
+                else if (txbResult.Text == "0" || txbResult.Text == "Cannot divide by 0")
                     txbResult.Text = "";
 
                 txbResult.Text += button.Content.ToString();
@@ -79,7 +79,7 @@ namespace Calculator
                 return;
             else
             {
-                if (txbResult.Text == "Cannot divide by zero" || isResult)
+                if (txbResult.Text == "Cannot divide by 0" || isResult)
                 {
                     isResult = false;
                     txbResult.Text = "0";
@@ -106,7 +106,7 @@ namespace Calculator
             if (isLimitOfChar)
                 isLimitOfChar = false;
 
-            if (txbResult.Text == "Cannot divide by zero")
+            if (txbResult.Text == "Cannot divide by 0")
                 txbResult.Text = "0";
            
             if (isFirstOperation)
@@ -116,7 +116,7 @@ namespace Calculator
 
             if (divisionByZero())
             {
-                txbResult.Text = "Cannot divide by zero";
+                txbResult.Text = "Cannot divide by 0";
                 txbPrevious.Text = "";
                 result = "";
                 operation = "";
@@ -143,7 +143,7 @@ namespace Calculator
                 ClickClearAll(sender, e);
             else if (divisionByZero())
             {
-                txbResult.Text = "Cannot divide by zero";
+                txbResult.Text = "Cannot divide by 0";
                 txbPrevious.Text = "";
                 result = "";
                 operation = "";
@@ -177,7 +177,7 @@ namespace Calculator
                 {
                     textbox.FontSize = 30;
 
-                    if (textbox.Text.Length > 18)
+                    if (textbox.Text.Length > 19)
                         isLimitOfChar = true;  
                 }
             }  
@@ -193,7 +193,7 @@ namespace Calculator
 
         private void ClickPlusMinus(object sender, RoutedEventArgs e)
         {
-            if (txbResult.Text == "Cannot divide by zero")
+            if (txbResult.Text == "Cannot divide by 0")
                 txbResult.Text = "0";
 
             double value = Double.Parse(txbResult.Text);
@@ -209,7 +209,7 @@ namespace Calculator
 
         private void ClickBackspace(object sender, RoutedEventArgs e)
         {
-            if (txbResult.Text == "Cannot divide by zero")
+            if (txbResult.Text == "Cannot divide by 0")
                 ClickClearAll(sender, e);
             else
             {

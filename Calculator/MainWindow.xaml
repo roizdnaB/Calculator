@@ -126,7 +126,7 @@
 
         <TextBox x:Name="txbResult" TextChanged="ResultFontControll" Grid.ColumnSpan="5" Grid.RowSpan="2" 
                  HorizontalContentAlignment="Right" VerticalContentAlignment="Center"
-                 Text="0" FontSize="70" Background="#28303B" Foreground="Wheat"  
+                 Text="0" FontSize="60" Background="#28303B" Foreground="Wheat"  
                  FontWeight="Regular" FontFamily="Bahnschrift Light" IsReadOnly="True" BorderThickness="0"/>
 
         <TextBox x:Name="txbPrevious" TextChanged="PreviousLengthControll" Height="30" Grid.ColumnSpan="4" 
