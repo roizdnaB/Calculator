@@ -1,0 +1,14 @@
+C:\Users\danie\Documents\Studies\Term IV\Object-oriented and Graphic Programming\Lab2\Calculator\Calculator\bin\Release\Calculator.exe.config
+C:\Users\danie\Documents\Studies\Term IV\Object-oriented and Graphic Programming\Lab2\Calculator\Calculator\bin\Release\Calculator.exe
+C:\Users\danie\Documents\Studies\Term IV\Object-oriented and Graphic Programming\Lab2\Calculator\Calculator\bin\Release\Calculator.pdb
+C:\Users\danie\Documents\Studies\Term IV\Object-oriented and Graphic Programming\Lab2\Calculator\Calculator\obj\Release\Calculator.csprojAssemblyReference.cache
+C:\Users\danie\Documents\Studies\Term IV\Object-oriented and Graphic Programming\Lab2\Calculator\Calculator\obj\Release\MainWindow.g.cs
+C:\Users\danie\Documents\Studies\Term IV\Object-oriented and Graphic Programming\Lab2\Calculator\Calculator\obj\Release\App.g.cs
+C:\Users\danie\Documents\Studies\Term IV\Object-oriented and Graphic Programming\Lab2\Calculator\Calculator\obj\Release\Calculator_MarkupCompile.cache
+C:\Users\danie\Documents\Studies\Term IV\Object-oriented and Graphic Programming\Lab2\Calculator\Calculator\obj\Release\Calculator_MarkupCompile.lref
+C:\Users\danie\Documents\Studies\Term IV\Object-oriented and Graphic Programming\Lab2\Calculator\Calculator\obj\Release\MainWindow.baml
+C:\Users\danie\Documents\Studies\Term IV\Object-oriented and Graphic Programming\Lab2\Calculator\Calculator\obj\Release\Calculator.g.resources
+C:\Users\danie\Documents\Studies\Term IV\Object-oriented and Graphic Programming\Lab2\Calculator\Calculator\obj\Release\Calculator.Properties.Resources.resources
+C:\Users\danie\Documents\Studies\Term IV\Object-oriented and Graphic Programming\Lab2\Calculator\Calculator\obj\Release\Calculator.csproj.GenerateResource.cache
+C:\Users\danie\Documents\Studies\Term IV\Object-oriented and Graphic Programming\Lab2\Calculator\Calculator\obj\Release\Calculator.exe
+C:\Users\danie\Documents\Studies\Term IV\Object-oriented and Graphic Programming\Lab2\Calculator\Calculator\obj\Release\Calculator.pdb
