@@ -1,17 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
 using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 using Calculator.Classes;
 
 namespace Calculator
@@ -155,7 +147,7 @@ namespace Calculator
                 txbPrevious.Text = "";
                 isDot = false;
                 isFirstOperation = true;
-                Console.WriteLine(result);
+
                 result = Calculation.toRPN(result);
                 Stack<string> stack = new Stack<string>();
                 stack = Calculation.ConvertToStack(result);
@@ -241,6 +233,45 @@ namespace Calculator
                         return true;
 
             return false;
+        }
+
+        private void Calculator_KeyDown(object sender, KeyEventArgs e)
+        {
+            
+            if ((e.Key == Key.NumPad0) || (e.Key == Key.D0))
+                ClickNumber(btnZero, e);
+            else if ((e.Key == Key.NumPad1) || (e.Key == Key.D1))
+                ClickNumber(btnOne, e);
+            else if ((e.Key == Key.NumPad2) || (e.Key == Key.D2))
+                ClickNumber(btnTwo, e);
+            else if ((e.Key == Key.NumPad3) || (e.Key == Key.D3))
+                ClickNumber(btnThree, e);
+            else if ((e.Key == Key.NumPad4) || (e.Key == Key.D4))
+                ClickNumber(btnFour, e);
+            else if ((e.Key == Key.NumPad5) || (e.Key == Key.D5))
+                ClickNumber(btnFive, e);
+            else if ((e.Key == Key.NumPad6) || (e.Key == Key.D6))
+                ClickNumber(btnSix, e);
+            else if ((e.Key == Key.NumPad7) || (e.Key == Key.D7))
+                ClickNumber(btnSeven, e);
+            else if ((e.Key == Key.NumPad8) || (e.Key == Key.D8))
+                ClickNumber(btnEight, e);
+            else if ((e.Key == Key.NumPad9) || (e.Key == Key.D9))
+                ClickNumber(btnNine, e);
+            else if (e.Key == Key.Back)
+                ClickBackspace(btnBackspace, e);
+            else if ((e.Key == Key.Decimal) || (e.Key == Key.OemPeriod))
+                ClickDot(btnDot, e);
+            else if ((e.Key == Key.Add) || (e.Key == Key.OemPlus))
+                ClickOperation(btnAddition, e);
+            else if ((e.Key == Key.Subtract) || (e.Key == Key.OemMinus))
+                ClickOperation(btnSubstraction, e);
+            else if ((e.Key == Key.Divide) || (e.Key == Key.OemQuestion))
+                ClickOperation(btnDivision, e);
+            else if (e.Key == Key.Multiply)
+                ClickOperation(btnMultiplication, e);
+            else if (e.Key == Key.Enter)
+                ClickEqual(btnEqual, e);
         }
     }
 }

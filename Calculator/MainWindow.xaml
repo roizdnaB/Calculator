@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Calculator"
         mc:Ignorable="d"
-        Title="Calculator" Height="550" Width="350" ResizeMode="CanMinimize" WindowStartupLocation="CenterScreen" Icon="icon.png">
+        Title="Calculator" Height="550" Width="350" ResizeMode="CanMinimize" WindowStartupLocation="CenterScreen" Icon="icon.png" KeyDown="Calculator_KeyDown">
     
     <Grid>
         <Grid.ColumnDefinitions>
@@ -28,7 +28,7 @@
                 HorizontalContentAlignment="Center" VerticalContentAlignment="Center" 
                 Content="1" FontSize="45" Background="#FF1A283E" Foreground="Wheat" 
                 FontWeight="Regular" FontFamily="Bahnschrift Light"/>
-        
+
         <Button x:Name="btnTwo" Click="ClickNumber" Grid.Column="1" Grid.Row="5"
                 HorizontalContentAlignment="Center" VerticalContentAlignment="Center" 
                 Content="2" FontSize="45" Background="#FF1A283E" Foreground="Wheat" 
@@ -126,7 +126,7 @@
 
         <TextBox x:Name="txbResult" TextChanged="ResultFontControll" Grid.ColumnSpan="5" Grid.RowSpan="2" 
                  HorizontalContentAlignment="Right" VerticalContentAlignment="Center"
-                 Text="0" FontSize="60" Background="#28303B" Foreground="Wheat"  
+                 Text="0" FontSize="70" Background="#28303B" Foreground="Wheat"  
                  FontWeight="Regular" FontFamily="Bahnschrift Light" IsReadOnly="True" BorderThickness="0"/>
 
         <TextBox x:Name="txbPrevious" TextChanged="PreviousLengthControll" Height="30" Grid.ColumnSpan="4" 
