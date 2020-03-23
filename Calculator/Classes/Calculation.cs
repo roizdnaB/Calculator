@@ -36,7 +36,7 @@ namespace Calculator.Classes
                     stack.Push(item);
                 }
             }
-
+            
             while (stack.Count != 0)
                 result += " " + stack.Pop();
 
@@ -44,7 +44,7 @@ namespace Calculator.Classes
 
             return result;
         }
-
+     
         public static Stack<string> ConvertToStack(string tokens)
         {
             string[] result = tokens.Split();

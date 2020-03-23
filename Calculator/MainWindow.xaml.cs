@@ -21,6 +21,7 @@ namespace Calculator
         public MainWindow()
         {
             InitializeComponent();
+            CultureInfo.CurrentCulture = new CultureInfo("en-US");
         }
 
         private void ClickClear(object sender, RoutedEventArgs e)
