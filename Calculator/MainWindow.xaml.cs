@@ -189,7 +189,7 @@ namespace Calculator
             if (txbResult.Text == "Cannot divide by 0")
                 txbResult.Text = "0";
 
-            double value = this.strToDouble(txbResult.Text);
+            double value = Convert.ToDouble(this.LocalizationControll(txbResult.Text));
 
             if (value != 0)
             {
@@ -275,15 +275,13 @@ namespace Calculator
                 ClickEqual(btnEqual, e);
         }
 
-        public double strToDouble(string item)
+        public string LocalizationControll(string item)
         {
-            double result;
+            string result = item;
 
             if (CultureInfo.CurrentCulture.Name == "pl-PL")
-                result = Convert.ToDouble(item.Replace(".", ","));
-            else
-                result = Convert.ToDouble(item);
-
+                result = item.Replace(".", ",");
+    
             return result;
         }
     }
