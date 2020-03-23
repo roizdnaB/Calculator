@@ -150,7 +150,7 @@ namespace Calculator
                 isDot = false;
                 isFirstOperation = true;
 
-                result = Calculation.toRPN(result);
+                result = Calculation.toRPN(this.LocalizationControll(result));
                 Stack<string> stack = new Stack<string>();
                 stack = Calculation.ConvertToStack(result);
 
