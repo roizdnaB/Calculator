@@ -5,6 +5,7 @@ using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
 using Calculator.Classes;
+using System.Globalization;
 
 namespace Calculator
 {
@@ -46,7 +47,7 @@ namespace Calculator
         private void ClickNumber(object sender, RoutedEventArgs e)
         {
             Button button = (Button)sender;
-            
+
             if (isLimitOfChar)
                 return;
             else
@@ -100,7 +101,7 @@ namespace Calculator
 
             if (txbResult.Text == "Cannot divide by 0")
                 txbResult.Text = "0";
-           
+
             if (isFirstOperation)
                 result = txbResult.Text;
             else
@@ -129,7 +130,7 @@ namespace Calculator
         private void ClickEqual(object sender, RoutedEventArgs e)
         {
             result += " " + operation + " " + txbResult.Text;
-            isResult = true;   
+            isResult = true;
 
             if (txbPrevious.Text.Length == 0)
                 ClickClearAll(sender, e);
@@ -160,7 +161,7 @@ namespace Calculator
         {
             TextBox textbox = (TextBox)sender;
             textbox.FontSize = 70;
-             
+
             if (textbox.Text.Length > 8)
             {
                 textbox.FontSize = 50;
@@ -170,9 +171,9 @@ namespace Calculator
                     textbox.FontSize = 30;
 
                     if (textbox.Text.Length > 19)
-                        isLimitOfChar = true;  
+                        isLimitOfChar = true;
                 }
-            }  
+            }
         }
 
         private void PreviousLengthControll(object sender, TextChangedEventArgs e)
@@ -188,7 +189,7 @@ namespace Calculator
             if (txbResult.Text == "Cannot divide by 0")
                 txbResult.Text = "0";
 
-            double value = Double.Parse(txbResult.Text);
+            double value = this.strToDouble(txbResult.Text);
 
             if (value != 0)
             {
@@ -222,7 +223,7 @@ namespace Calculator
         private bool divisionByZero()
         {
             int size = result.Length;
-            
+
             if (size < 5)
                 return false;
             else if (result[size - 1] == '0' && result[size - 3] == '/')
@@ -237,7 +238,7 @@ namespace Calculator
 
         private void Calculator_KeyDown(object sender, KeyEventArgs e)
         {
-            
+
             if ((e.Key == Key.NumPad0) || (e.Key == Key.D0))
                 ClickNumber(btnZero, e);
             else if ((e.Key == Key.NumPad1) || (e.Key == Key.D1))
@@ -272,6 +273,18 @@ namespace Calculator
                 ClickOperation(btnMultiplication, e);
             else if (e.Key == Key.Enter)
                 ClickEqual(btnEqual, e);
+        }
+
+        public double strToDouble(string item)
+        {
+            double result;
+
+            if (CultureInfo.CurrentCulture.Name == "pl-PL")
+                result = Convert.ToDouble(item.Replace(".", ","));
+            else
+                result = Convert.ToDouble(item);
+
+            return result;
         }
     }
 }
